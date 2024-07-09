@@ -1,7 +1,5 @@
 <h1 align="center">Bot Asgard</h1>
-<p align="center">Bot para gerenciamento de guilda de Throne and Liberty</p>
 
-<hr>
 
 <strong>
 Este projeto é um bot para Discord que oferece ferramentas para gerenciamento de um servidor focado no jogo Throne and Liberty.
