@@ -1,3 +1,0 @@
-# Configurações do Bot
-BOT_TOKEN = seu_token_aqui
-MODERATOR_ID = id_do_cargo_de_moderador_aqui

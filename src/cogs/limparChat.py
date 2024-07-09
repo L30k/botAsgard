@@ -1,7 +1,7 @@
 import discord
 from discord import app_commands
 from discord.ext import commands
-from classes_extras.menuDeConfirmacao import MenuDeConfirmacao
+from src.classes_extras.menuDeConfirmacao import MenuDeConfirmacao
 
 class LimparChat(commands.Cog):
     def __init__(self, bot):
