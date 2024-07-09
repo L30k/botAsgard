@@ -1,5 +1,5 @@
 <h1 align="center">Bot Asgard</h1>
-<h3 align="center">Bot para gerenciamento de guilda de Throne and Liberty</h3>
+<p align="center">Bot para gerenciamento de guilda de Throne and Liberty</p>
 
 <hr>
 
