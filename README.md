@@ -5,15 +5,12 @@
 Este projeto é um bot para Discord que oferece ferramentas para gerenciamento de um servidor focado no jogo Throne and Liberty.
 </strong>
 
-<hr>
 
 ## Documentação
 
 - [Configuração e Uso](#configuração-e-uso)
 - [Funcionalidades](#funcionalidades)
 - [Licença](LICENSE.md)
-
-<hr>
 
 ## Configuração e Uso
 
@@ -35,8 +32,6 @@ Para ativar o bot pela primeira vez:
 3. No chat do Discord, execute o comando `!sincronizar` para sincronizar os comandos. Este passo só precisa ser feito
    uma vez durante a primeira ativação do bot.
 
-<hr>
-
 ## Funcionalidades
 
 <h4>Comandos</h4>
@@ -48,8 +43,6 @@ Para ativar o bot pela primeira vez:
 <h4>Eventos</h4>
 
 > Atualização do status do bot
-
-<hr>
 
 ## Links
 
