@@ -2,6 +2,10 @@ import discord
 from discord.ext import commands
 import os
 
+from funcoes.carregarConfiguracoes import *
+
+config = carregarConfiguracoes('config.txt')
+
 # import funçôes
 from funcoes.carregarCogs import *
 
@@ -19,7 +23,7 @@ bot = commands.Bot(command_prefix=prefixo, intents=intents)
 
 @bot.command()
 async def sincronizar(ctx:commands.Context):
-    if ctx.author.id == 246671312049799168:
+    if ctx.author.id == config.get("MODERATOR_ROLE_ID"):
         sincs = await bot.tree.sync()
         await ctx.reply(f"{len(sincs)} Comandos sincronizados", ephemeral=True)
 
@@ -30,4 +34,4 @@ async def on_ready():
     print('Bot Iniciado!')
 
 
-bot.run("MTI1OTkwNjAwODQ1MzYxMTU0MA.GF3ZpG.k5LFWtyGzsLxL-uEi9WyE76F2hmdnWA5vGMp4M")
+bot.run(config.get("BOT_TOKEN"))
