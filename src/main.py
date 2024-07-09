@@ -1,12 +1,12 @@
 import discord
-from discord.ext import commands
 import os
+from discord.ext import commands
+from dotenv import load_dotenv
 
 # import funçôes
 from funcoes.carregarCogs import *
-from funcoes.carregarConfiguracoes import *
 
-arquivo = carregarConfiguracoes("config.txt")
+load_dotenv()
 
 # Definir intenções
 intents = discord.Intents.default()
@@ -22,7 +22,7 @@ bot = commands.Bot(command_prefix=prefixo, intents=intents)
 
 @bot.command()
 async def sincronizar(ctx:commands.Context):
-    if ctx.author.id == arquivo.get("MODERATOR_ID"):
+    if ctx.author.id == os.getenv("MODERATOR_ID"):
         sincs = await bot.tree.sync()
         await ctx.reply(f"{len(sincs)} Comandos sincronizados", ephemeral=True)
 
@@ -33,4 +33,4 @@ async def on_ready():
     print('Bot Iniciado!')
 
 
-bot.run(arquivo.get("BOT_TOKEN"))
+bot.run(os.getenv("BOT_TOKEN"))
