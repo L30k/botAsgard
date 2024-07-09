@@ -11,7 +11,7 @@ Este projeto é um bot para Discord que oferece ferramentas para gerenciamento d
 
 - [Configuração e Uso](#configuração-e-uso)
 - [Funcionalidades](#funcionalidades)
-- [Licença](#licença)
+- [Licença](LICENSE.md)
 
 <hr>
 
