@@ -4,11 +4,25 @@ from discord.ext import commands, tasks
 class StatusBot(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
-        self.update_status.start()  # Inicia a tarefa de atualizar o status
+        self.status_messages = [
+            "Protegendo os segredos de Asgard.",
+            "Explorando os reinos de Asgard.",
+            "Servindo fielmente Asgard.",
+            "Guardando os portões de Asgard.",
+            "Em busca de conhecimento em Asgard.",
+            "Defendendo a honra de Asgard.",
+            "Descobrindo os mistérios de Asgard.",
+            "Construindo novos caminhos para Asgard.",
+            "Navegando pelos ventos de Asgard.",
+            "Celebrando a grandeza de Asgard."
+        ]
+        self.current_message_index = 0
+        self.update_status.start()
 
-    @tasks.loop(hours=1)
+    @tasks.loop(seconds=30)
     async def update_status(self):
-        activity = discord.CustomActivity(name=f"🗡Asgard")
+        self.current_message_index = (self.current_message_index + 1) % len(self.status_messages)
+        activity = discord.CustomActivity(name=self.status_messages[self.current_message_index])
         await self.bot.change_presence(activity=activity)
 
     @update_status.before_loop
